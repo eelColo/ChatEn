@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     // Scroll automatico
     function scrollear(){
         console.log("hola")
-        list.scrollTop = list.scrollHeight;
-        console.log("hola2")
+        list.scrollTo(0, list.scrollHeight);
+        console.log(list.scrollHeight)
     }
 
 
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         li.innerHTML = `<p><Strong>${user}> </Strong>${message}</p>`
 
         list.appendChild(li);
+        li.scrollIntoView({behavior:"smooth",block:"end"})
         
     })
 
@@ -44,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () =>{
         socket.send(data);
         // Se resetea el mensaje y se hace focus para que siga escribiendo
         form.message.value = "";
-        form.message.focus()
+        
         form.user.value = e.target.user.value;
-        scrollear()
+        li.scrollIntoView({behavior:"smooth",block:"end"})
     })
 
     
