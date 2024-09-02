@@ -34,8 +34,8 @@ ws.on("connection", (data) => {
     data.on("message", (data) =>{
         console.log("Mensaje recibido: ");
         console.log(data);
-        mensjs += JSON.stringify(data)
-        console.log(mensjs)
+        // mensjs += JSON.stringify(data)
+        // console.log(mensjs)
         // Envia un mensaje a los demas conectados 
         ws.emit("message", data)
     })
