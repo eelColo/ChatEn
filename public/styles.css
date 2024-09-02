@@ -294,14 +294,17 @@ ul{
     
 }
 .entrada p{
+    padding-top: 5px;
     padding-left: 25px;
+    
 }
 input{
     background-color: black;
     border: none;
     margin-left: 10px;
     outline: none;
-    width: 110px;
+    width: 50%;
+    
 }
 input:focus{
     background-color: black;
@@ -331,4 +334,9 @@ button{
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+.user-title{
+  font-weight: bold;
+  
 }
