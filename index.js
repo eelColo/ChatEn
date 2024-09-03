@@ -7,7 +7,7 @@ const app = express();
 const server = createServer(app);
 const ws = new Server(server);
 const PORT = process.env.PORT ?? 4000
-const HOST = process.env.HOST ?? "localhost"
+
 let usuariosOnline = 0;
 let mensjs = []
 
@@ -58,5 +58,5 @@ ws.on("connection", (data) => {
 
 
 //Levantando servidor
-server.listen(PORT, HOST, console.log(`---Servidor corriendo--- en: ${HOST}:${PORT}`))
+server.listen(PORT, console.log(`---Servidor corriendo--- en: ${HOST}:${PORT}`))
 
