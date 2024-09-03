@@ -58,5 +58,5 @@ ws.on("connection", (data) => {
 
 
 //Levantando servidor
-server.listen(PORT, console.log(`---Servidor corriendo--- en: ${HOST}:${PORT}`))
+server.listen(PORT, console.log(`---Servidor corriendo--- en: ${HOST}`))
 
