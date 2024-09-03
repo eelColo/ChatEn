@@ -1,4 +1,4 @@
-import express, { json } from "express";
+import express from "express";
 import {Server} from "socket.io";
 import {createServer} from "http";
 
@@ -6,7 +6,7 @@ import {createServer} from "http";
 const app = express();
 const server = createServer(app);
 const ws = new Server(server);
-const PORT = process.env.PORT ?? 4500
+const PORT = process.env.PORT ?? 4000
 const HOST = process.env.HOST ?? "localhost"
 let usuariosOnline = 0;
 let mensjs = []
